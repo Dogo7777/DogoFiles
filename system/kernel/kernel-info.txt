@@ -1,0 +1,71 @@
+# Kernel ativo: 7.0.5-zen1-1-zen
+# Kernels instalados:
+linux 7.0.5.arch1-1
+linux-api-headers 6.19-1
+linux-firmware 20260410-1
+linux-firmware-amdgpu 20260410-1
+linux-firmware-atheros 20260410-1
+linux-firmware-broadcom 20260410-1
+linux-firmware-cirrus 20260410-1
+linux-firmware-intel 20260410-1
+linux-firmware-mediatek 20260410-1
+linux-firmware-nvidia 20260410-1
+linux-firmware-other 20260410-1
+linux-firmware-radeon 20260410-1
+linux-firmware-realtek 20260410-1
+linux-firmware-whence 20260410-1
+linux-zen 7.0.5.zen1-1
+linux-zen-headers 7.0.5.zen1-1
+linuxtoys 6.0.6-1
+
+# Módulos carregados no boot:
+Module                  Size  Used by
+dm_mod                241664  0
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+snd_seq               151552  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+overlay               266240  2
+rfkill                 45056  3
+vfat                   28672  1
+fat                   118784  1 vfat
+intel_rapl_msr         20480  0
+intel_rapl_common      61440  1 intel_rapl_msr
+x86_pkg_temp_thermal    16384  0
+snd_hda_codec_alc662    20480  1
+coretemp               24576  0
+snd_hda_codec_realtek_lib    73728  1 snd_hda_codec_alc662
+snd_hda_codec_intelhdmi    28672  1
+snd_hda_codec_generic   131072  2 snd_hda_codec_alc662,snd_hda_codec_realtek_lib
+snd_hda_codec_hdmi     65536  1 snd_hda_codec_intelhdmi
+kvm_intel             540672  0
+snd_hda_intel          73728  4
+snd_hda_codec         233472  6 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_alc662,snd_hda_codec_realtek_lib,snd_hda_codec_intelhdmi
+kvm                  1593344  1 kvm_intel
+snd_hda_core          151552  7 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_alc662,snd_hda_codec,snd_hda_codec_realtek_lib,snd_hda_codec_intelhdmi
+snd_intel_dspcfg       49152  1 snd_hda_intel
+r8169                 172032  0
+snd_intel_sdw_acpi     16384  1 snd_intel_dspcfg
+snd_hwdep              24576  1 snd_hda_codec
+irqbypass              16384  1 kvm
+snd_pcm               245760  5 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+realtek                61440  1
+ghash_clmulni_intel    12288  0
+mousedev               28672  0
+snd_timer              61440  3 snd_seq,snd_hrtimer,snd_pcm
+intel_oc_wdt           12288  0
+aesni_intel           110592  0
+mdio_devres            12288  1 r8169
+snd                   172032  19 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_timer,snd_hda_codec_realtek_lib,snd_pcm
+libphy                196608  3 r8169,mdio_devres,realtek
+spi_nor               204800  0
+at24                   28672  0
+mei_hdcp               28672  0
+mei_pxp                20480  0
+rapl                   20480  0
+soundcore              16384  1 snd
+mdio_bus               69632  3 r8169,libphy,realtek
+intel_cstate           20480  0
+mtd                   114688  3 spi_nor
+mei_me                 61440  2
+i2c_i801               36864  0

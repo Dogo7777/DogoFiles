@@ -1,0 +1,12 @@
+# Montagens btrfs ativas (findmnt)
+
+/                    /dev/sda7[/@]                          btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/@
+├─/opt               /dev/sda7[/@opt]                       btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=361,subvol=/@opt
+├─/.snapshots        /dev/sda7[/@snapshots]                 btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=260,subvol=/@snapshots
+├─/home              /dev/sda7[/@home]                      btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=258,subvol=/@home
+├─/usr/local         /dev/sda7[/@usr_local]                 btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=363,subvol=/@usr_local
+├─/var               /dev/sda7[/@var]                       btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=352,subvol=/@var
+│ ├─/var/lib/flatpak /dev/sda7[/@flatpak]                   btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=265,subvol=/@flatpak
+│ └─/var/log         /dev/sda7[/@log]                       btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=266,subvol=/@log
+├─/etc/ananicy.d     /dev/sda7[/@var/persist/etc/ananicy.d] btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=352,subvol=/@var
+└─/etc/xml           /dev/sda7[/@var/persist/etc/xml]       btrfs rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=352,subvol=/@var

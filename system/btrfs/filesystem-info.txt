@@ -1,0 +1,22 @@
+# Informações dos dispositivos btrfs
+
+=== /dev/sda7[/@] ===
+
+=== /dev/sda7[/@flatpak] ===
+
+=== /dev/sda7[/@home] ===
+
+=== /dev/sda7[/@log] ===
+
+=== /dev/sda7[/@opt] ===
+
+=== /dev/sda7[/@snapshots] ===
+
+=== /dev/sda7[/@usr_local] ===
+
+=== /dev/sda7[/@var] ===
+
+=== /dev/sda7[/@var/persist/etc/ananicy.d] ===
+
+=== /dev/sda7[/@var/persist/etc/xml] ===
+

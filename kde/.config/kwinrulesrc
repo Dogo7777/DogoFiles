@@ -1,0 +1,11 @@
+[647ecbbd-bf24-4e16-a1a5-93697b1b9ffc]
+Description=Corrigir tamango
+minsize=1280,720
+minsizerule=2
+size=1280,720
+sizerule=3
+wmclassmatch=1
+
+[General]
+count=1
+rules=647ecbbd-bf24-4e16-a1a5-93697b1b9ffc

@@ -1,0 +1,83 @@
+# /etc/fstab —  — backup 2026-05-15
+# UUID dos dispositivos:
+#   /dev/sdb1: LABEL="ARCH_202605" UUID="8C59-4320" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="0014b63f-01"
+#   /dev/sda7: UUID="b7af19ca-b6b0-4f55-a758-b2ceeda6501e" UUID_SUB="1a50ca5a-6e76-4388-848e-556989ab4d3c" BLOCK_SIZE="4096" TYPE="btrfs" PARTUUID="6c8d7216-455e-4d4a-be7c-7d0837e731a2"
+#   /dev/sda1: UUID="E4E1-DE95" BLOCK_SIZE="512" TYPE="vfat" PARTLABEL="EFI System Partition" PARTUUID="7dafacfa-bb8d-4175-8e34-6ab156de9a07"
+#   /dev/sda6: UUID="3825-AE83" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="79e52e8f-08ff-4ee6-bb8c-a1447d64c6f1"
+
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# ROOT (imutável)
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /  btrfs  ro,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@  0 0
+
+# HOME (dados do usuário)
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /home  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@home  0 0
+
+# VAR (Agora como subvolume dedicado e RW)
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@var  0 0
+
+# LOGS (Mantendo separado como você já tinha planejado)
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var/log  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@log  0 0
+
+# SNAPSHOTS
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /.snapshots  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,subvol=@snapshots  0 0
+
+# FLATPAK
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var/lib/flatpak  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@flatpak  0 0
+
+# EFI
+#UUID=3825-AE83  /boot/efi  vfat  rw,relatime,fmask=0022,dmask=0022  0 2
+
+# TMP (RAM)
+#tmpfs  /var/tmp  tmpfs  defaults,noatime,mode=1777,size=4G  0 0
+
+# OPT
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /opt  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,subvol=@opt  0 0
+
+# USR/BIN
+#UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /usr/local  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,subvol=@usr_local  0 0
+
+#ETC/XML
+#/var/persist/etc/xml  /etc/xml  none  bind,nofail,x-systemd.requires=/var  0  0
+
+#ANAICY.D
+#/var/persist/etc/ananicy.d  /etc/ananicy.d  none  bind,nofail,x-systemd.requires=/var  0  0
+
+#--------------------------------------------------------------------------------------------------------------
+
+# ROOT (imutável)
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /  btrfs  ro,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@  0 0
+
+# HOME
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /home  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@home  0 0
+
+# VAR
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@var  0 0
+
+# LOGS
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var/log  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@log  0 0
+
+# SNAPSHOTS
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /.snapshots  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,subvol=@snapshots  0 0
+
+# FLATPAK
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /var/lib/flatpak  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@flatpak  0 0
+
+# EFI
+UUID=3825-AE83  /boot/efi  vfat  rw,relatime,fmask=0022,dmask=0022  0 2
+
+# OPT
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /opt  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@opt  0 0
+
+# USR/LOCAL
+UUID=b7af19ca-b6b0-4f55-a758-b2ceeda6501e  /usr/local  btrfs  rw,noatime,ssd,discard=async,space_cache=v2,compress=zstd:1,subvol=@usr_local  0 0
+
+# TMP (RAM)
+tmpfs  /tmp      tmpfs  defaults,noatime,mode=1777,size=4G  0 0
+tmpfs  /var/tmp  tmpfs  defaults,noatime,mode=1777,size=2G  0 0
+
+# BINDS (com ordem garantida)
+/var/persist/etc/xml       /etc/xml       none  bind,nofail,x-systemd.requires=/var  0 0
+/var/persist/etc/ananicy.d /etc/ananicy.d none  bind,nofail,x-systemd.requires=/var  0 0

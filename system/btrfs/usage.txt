@@ -1,0 +1,32 @@
+# Uso de espaço por subvolume
+
+Data, single: total=170.01GiB, used=166.41GiB
+System, DUP: total=8.00MiB, used=48.00KiB
+Metadata, DUP: total=3.00GiB, used=2.05GiB
+GlobalReserve, single: total=261.88MiB, used=0.00B
+
+Overall:
+    Device size:		 219.06GiB
+    Device allocated:		 176.02GiB
+    Device unallocated:		  43.04GiB
+    Device missing:		     0.00B
+    Device slack:		     0.00B
+    Used:			 170.50GiB
+    Free (estimated):		  46.64GiB	(min: 25.12GiB)
+    Free (statfs, df):		  46.64GiB
+    Data ratio:			      1.00
+    Metadata ratio:		      2.00
+    Global reserve:		 261.88MiB	(used: 0.00B)
+    Multiple profiles:		        no
+
+Data,single: Size:170.01GiB, Used:166.41GiB (97.88%)
+   /dev/sda7	 170.01GiB
+
+Metadata,DUP: Size:3.00GiB, Used:2.05GiB (68.21%)
+   /dev/sda7	   6.00GiB
+
+System,DUP: Size:8.00MiB, Used:48.00KiB (0.59%)
+   /dev/sda7	  16.00MiB
+
+Unallocated:
+   /dev/sda7	  43.04GiB

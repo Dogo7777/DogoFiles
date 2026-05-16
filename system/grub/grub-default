@@ -1,0 +1,12 @@
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=1
+GRUB_TIMEOUT_STYLE=menu
+GRUB_DISTRIBUTOR="Arch"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet rootflags=subvol=@ ro mitigations=off nowatchdog nmi_watchdog=0 transparent_hugepage=madvise i915.enable_fbc=1 i915.enable_psr=2 i915.fastboot=1 intel_pstate=active processor.max_cstate=1 intel_idle.max_cstate=1"
+GRUB_CMDLINE_LINUX="processor.max_cstate=1 intel_idle.max_cstate=1"
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+GRUB_TERMINAL_INPUT=console
+GRUB_GFXMODE=1920x1080,auto
+GRUB_GFXPAYLOAD_LINUX=keep
+GRUB_DISABLE_RECOVERY=true
+GRUB_DISABLE_SUBMENU=false
