@@ -17,8 +17,8 @@
 set -euo pipefail
 
 # ── CONFIGURAÇÃO — edite antes de usar ───────────────────────────────────────
-GITHUB_USER="SEU_USUARIO_AQUI"
-REPO_NAME="dotfiles"
+GITHUB_USER="Dogo7777"
+REPO_NAME="DogoFiles"
 DOTFILES="$HOME/dotfiles"
 # ─────────────────────────────────────────────────────────────────────────────
 
